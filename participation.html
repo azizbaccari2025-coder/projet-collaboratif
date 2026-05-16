@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mesStyles.css">
+</head>
+<body>
+    <form action="participation.php" method="post" onsubmit="return valider()">
+        <fieldset>
+            <legend>Participation</legend>
+            <p>Cliquer pour choisir un site</p>
+            <div class="conteneur">
+            <div class ="sites" id="s1" onclick="choixSite('Bizerte','1')">Bizerte</div>
+            <div class ="sites" id="s2" onclick="choixSite('Haouiria','2')">Haouiria</div>
+            <div class ="sites" id="s3" onclick="choixSite('Sousse','3')">Sousse</div>
+            <div class ="sites" id="s4" onclick="choixSite('Mahdia','4')">Mahdia</div>
+            <img src="carte.jpg" alt="" class="carte"><br>
+            </div>
+            <label for="cin">CIN:</label>
+            <input type="text" name="cin" id="cin">
+            <label for="site">Site:</label>
+            <input type="text" name="site" id="site" readonly><br>
+            <input type="hidden" name="siteId" id="siteId">
+            <label for="date">Date:</label>
+            <input type="date" name="date" id="date">
+            <label for="heure">Heure:</label>
+            <input type="time" name="heure" id="heure"><br>
+            <input type="hidden" name="cinMait" id="cinMait">
+            <input type="submit" value="Participer"> <input type="reset" value="Annuler">
+        </fieldset>
+    </form>
+</body>
+<script src="mesControles.js"></script>
+</html>
